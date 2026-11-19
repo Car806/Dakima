@@ -1,0 +1,6 @@
+{
+  "name": "DAKIMA Nigiris — Menú Digital & Omakase",
+  "description": "Menú digital de DAKIMA Nigiris en Guadalajara, Jalisco. Experiencia Omakase, nigiris de atún Bluefin, makis, sashimis y cocina japonesa de autor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

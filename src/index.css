@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Marcellus", Georgia, serif;
+  --font-condensed: "Dorsa", "Marcellus", serif;
+  --font-serif-jp: "Shippori Mincho", Georgia, serif;
+
+  --color-washi: #F6F3EC;
+  --color-washi-elevated: #EFECE4;
+  --color-sumi: #141413;
+  --color-hanko: #9E2A2B;
+  --color-gold: #B59150;
+  --color-ink: #1C1B19;
+  --color-ink-muted: #57534E;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-serif-jp);
+    background-color: #F6F3EC;
+    color: #1C1B19;
+    scroll-padding-top: 64px;
+  }
+
+  /* Custom thin editorial scrollbars for horizontal category strip */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.font-marcellus {
+  font-family: "Marcellus", Georgia, serif;
+}
+
+.font-dorsa {
+  font-family: "Dorsa", "Marcellus", serif;
+}
+
+.font-mincho {
+  font-family: "Shippori Mincho", Georgia, serif;
+}
+
+.writing-vertical-jp {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Subtle traditional Asanoha geometric washi pattern at ~3% opacity */
+.bg-washi-pattern {
+  background-color: #F6F3EC;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%231C1B19' stroke-opacity='0.03' stroke-width='1'%3E%3Cpath d='M30 0L60 15L60 45L30 60L0 45L0 15Z'/%3E%3Cpath d='M30 0L30 60M0 15L60 45M60 15L0 45'/%3E%3Cpath d='M30 0L15 30L30 60L45 30Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
